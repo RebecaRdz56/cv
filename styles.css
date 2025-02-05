@@ -1,0 +1,106 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #6e6776;
+  color: #333;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 0px;
+  padding: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  grid-column: 1 / -1;
+  background-color: #2a374b;
+  color: #f2e6ff;
+  padding: 20px;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.header p {
+  margin: 5px 0 0;
+  font-size: 1.2em;
+}
+
+.leftSide, .rightSide {
+  background-color: #edd6ef;
+  padding: 15px;
+  border-radius: 0px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.leftSide h2, .rightSide h2 {
+  margin-top: 0;
+}
+
+.socialMedia{
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+
+}
+
+.profilePic {
+  width: 150px; /* Ajusta el tamaño según lo necesites */
+  height: 150px; /* Asegúrate de que el alto y el ancho sean iguales */
+  border-radius: 50%; /* Esto hace que la imagen sea circular */
+  display: block;
+  margin: 0 auto 15px;
+  border: 3px solid #2a374b; /* Borde opcional */
+  object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+}
+
+.badge-img {
+  width: 70px; /* Ancho fijo */
+  height: 70px; /* Alto fijo */
+  margin-right: 10px; /* Espacio entre las imágenes */
+}
+
+.body {
+  grid-column: 2 / 3;
+  background-color: #edd6ef;
+  padding: 15px;
+  border-radius: 0px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.385);
+}
+
+.footer {
+  grid-column: 1 / -1;
+  background-color: #2a374b;
+  color: #f2e6ff;
+  text-align: center;
+  padding: 10px;
+  margin-top: 0px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .layout {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto auto;
+  }
+
+  .body {
+      grid-column: 1 / -1;
+  }
+}
